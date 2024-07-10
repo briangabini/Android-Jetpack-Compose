@@ -36,7 +36,7 @@ class MainActivity : ComponentActivity() {
                         textAlign = TextAlign.Center,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(ve*.rtical = 24.dp)
+                            .padding(vertical = 24.dp)
                     )
                 }
             }
