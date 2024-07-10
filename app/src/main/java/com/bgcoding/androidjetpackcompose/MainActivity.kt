@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.constraintlayout.compose.ChainStyle
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.ConstraintSet
 import androidx.constraintlayout.compose.Dimension
@@ -44,7 +45,7 @@ class MainActivity : ComponentActivity() {
                     width = Dimension.value(100.dp)
                     height = Dimension.value(100.dp)
                 }
-//                createHorizontalChain(greenBox, redBox)
+                createHorizontalChain(greenBox, redBox, chainStyle = ChainStyle.Packed)
             }
 
             ConstraintLayout(constraints, modifier = Modifier.fillMaxSize()) {
