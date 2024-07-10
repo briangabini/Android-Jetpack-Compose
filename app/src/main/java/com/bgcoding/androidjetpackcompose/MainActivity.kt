@@ -27,22 +27,19 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 //        enableEdgeToEdge()
         setContent {
-            val scrollState = rememberScrollState()
-            Column(
-                modifier = Modifier.verticalScroll(scrollState)
-            ) {
-                for (i in 1..50) {
+            LazyColumn{
+                items(5000) {
                     Text(
-                        text = "Item $i",
+                        text = "Item $it",
                         fontSize = 24.sp,
                         fontWeight = FontWeight.Bold,
                         textAlign = TextAlign.Center,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(vertical = 24.dp)
+                            .padding(ve*.rtical = 24.dp)
                     )
                 }
-                }
+            }
         }
     }
 }
