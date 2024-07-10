@@ -30,9 +30,10 @@ class MainActivity : ComponentActivity() {
             val constraints = ConstraintSet {
                 val greenBox = createRefFor("greenbox")
                 val redBox = createRefFor("redbox")
+                val guideline = createGuidelineFromTop(0.5f)
 
                 constrain(greenBox) {
-                    top.linkTo(parent.top)
+                    top.linkTo(guideline)
                     start.linkTo(parent.start)
                     width = Dimension.value(100.dp)
                     height = Dimension.value(100.dp)
